@@ -1,3 +1,10 @@
+"""_summary_
+check if kth bit is set -> x & (1 << k)
+set the kth bit -> x | (1 << k)
+flip the kth bit -> x ^ (1 << k)
+clear the kth bit -> x & ~(1 << k)
+"""
+
 # Check a specific bit
 def check_bit(n, mask):
     """
@@ -14,6 +21,14 @@ def set_bit(n, mask):
     """
     return n | mask
 
+# Flip (invert) a specific bit
+def flip_bit(n, mask):
+    """
+    Inverts the specified bit in n.
+    Returns: The modified number.
+    """
+    return n ^ mask
+
 # Reset (set to 0) a specific bit
 def reset_bit(n, mask):
     """
@@ -22,10 +37,3 @@ def reset_bit(n, mask):
     """
     return n & mask
 
-# Flip (invert) a specific bit
-def flip_bit(n, mask):
-    """
-    Inverts the specified bit in n.
-    Returns: The modified number.
-    """
-    return n ^ mask

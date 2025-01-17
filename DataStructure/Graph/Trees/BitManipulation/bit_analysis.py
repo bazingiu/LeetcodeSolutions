@@ -37,3 +37,27 @@ def find_lsb(n):
     Returns: The 0-based index of the LSB.
     """
     return (n & -n).bit_length() - 1
+
+#find n * 2^K
+def mult_by_power_of_two(n, power):
+    """
+    Multiply a number by a power of two.
+    Returns: The result of the multiplication.
+    """
+    return n << power
+
+# find n / 2^K
+def div_by_power_of_two(n, power):
+    """
+    Divide a number by a power of two.
+    Returns: The result of the division.
+    """
+    return n >> power
+
+# fing X %  2^K
+def mod_by_power_of_two(n, power):
+    """
+    Find the modulo of a number by a power of two.
+    Returns: The result of the modulo operation.
+    """
+    return n & (power - 1)

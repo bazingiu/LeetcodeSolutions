@@ -31,3 +31,24 @@ def set_multiple_bits(n, mask):
     the function will set the bits specified by the mask, resulting in 0b11011111 (223 in decimal).
     """
     return n | mask
+
+# swap 2 numbers x and y without using a temporary variable
+def swap_numbers(x, y):
+    """
+    Swaps two numbers x and y without using a temporary variable.
+    Parameters:
+    - x: The first number.
+    - y: The second number.
+    
+    Returns: The tuple (x, y) with the values swapped.
+    
+    Example:
+    If x = 2 and y = 5, the function will return (5, 2).
+    x = 2 ^ 5 = 7 (011 ^ 101 = 110) {x = x^y, y = y}
+    y = 7 ^ 5 = 2 (110 ^ 101 = 011) {x = x^y, y = x^y^y = x}
+    x = 7 ^ 2 = 5   (110 ^ 011 = 101) {x= x^y^x=y, y = x}
+    """
+    x = x ^ y
+    y = x ^ y
+    x = x ^ y
+    return x, y
