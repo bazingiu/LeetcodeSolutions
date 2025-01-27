@@ -9,7 +9,7 @@ class Solution:
     Time Complexity: O(n), where n is the number of elements in the list.
     Space Complexity: O(n), where n is the number of elements in the list.
     """
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums):
         seen_numbers = set()
         for number in nums:
             if number in seen_numbers:
