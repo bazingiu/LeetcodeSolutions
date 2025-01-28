@@ -1,6 +1,7 @@
 # dfs solurtion
+# Time complexity: o(m*n)
+# Space complexity: o(m*n) bad case of recursion stack
 from collections import deque
-
 
 def count_islands(grid):
     # Directions for moving up, down, left, and right
@@ -29,10 +30,9 @@ def count_islands(grid):
 
     return island_count
 
-# Time complexity: o(m*n)
-# Space complexity: o(m*n) bad case of recursion stack
-
 # bfs solution
+# Time complexity: o(m*n)
+# Space complexity: O(min(rows,cols)) for the baddest case of the queue
 def count_islands(grid):
     # Directions for moving up, down, left, and right
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
