@@ -33,6 +33,13 @@ class BinaryTree:
             self._inorder_traversal(node.right, result)
         return result
     
+    def inorder(self, node):
+        if not node:
+            return 
+        
+        return self.inorder(node.left) + [node.val] + self.inorder(node.right)
+    
+
     def preorder_traversal(self):
         return self._preorder_traversal(self.root, [])
         
@@ -52,3 +59,5 @@ class BinaryTree:
             self._postorder_traversal(node.right, result)
             result.append(node.val)
         return result
+
+

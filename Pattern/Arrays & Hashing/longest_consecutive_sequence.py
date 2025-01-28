@@ -71,3 +71,16 @@ class Solution:
         #    num_to_sequence_length = {100: 1, 4: 4, 200: 1, 1: 4, 3: 4, 2: 4}
         #    max_length = 4
         # The longest consecutive sequence is [1, 2, 3, 4], so the function returns 4.
+
+# Time complexity: O(N)
+# Space complexity: O(N)
+def longest_consecutive_sequence(nums):
+    numSet  = set(nums)
+    longest = 0
+    for num in numSet :
+        if (num - 1) not in numSet:
+            length  = 1
+            while (num + length) in numSet:
+                length += 1
+            longest = max(longest, length)
+    return longest 
