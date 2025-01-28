@@ -7,7 +7,6 @@ Skip: Do nothing and move to the next day i+1.
 we can use cache for (i, buy/sell) (n possible value, 2 different state) so n * 2
 """
 
-
 def best_time_to_buy_sell_with_cooldown(prices):
     # Memoization table to store the results of subproblems
     memo = {}
