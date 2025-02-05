@@ -1,4 +1,3 @@
-
 from binary_search_tree import BinaryTree
 
 tree = BinaryTree()
