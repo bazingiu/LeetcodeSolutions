@@ -7,15 +7,17 @@ def dijkstra(graph, start):
     
     # Coda di priorità per i nodi da esplorare
     priority_queue = [(0, start)]  # distanza, nodo
+    visited = set()
     
     while priority_queue:
         # Estrai il nodo con la distanza minima
         current_distance, current_node = heapq.heappop(priority_queue)
         
         # Se la distanza corrente è maggiore di quella registrata, salta il nodo
-        if current_distance > distance[current_node]:
+        if current_node in visited:
             continue
         
+        visited.add(current_node)
         # Esplora i vicini
         for neighbor, weight in graph[current_node]:
             distance_to_neighbor = current_distance + weight

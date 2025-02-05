@@ -1,6 +1,10 @@
 def palindrome_partitioning (s):
-    def is_palindrome (s):
-        return s == s[::-1]
+    def isPali(self, s, l, r):
+            while l < r:
+                if s[l] != s[r]:
+                    return False
+                l, r = l + 1, r - 1
+            return True
     
     res = []
     
@@ -9,6 +13,6 @@ def palindrome_partitioning (s):
             res.append(path)
             return
         for i in range(start, len(s)):
-            if is_palindrome(s[start:i+1]):
+            if isPali(s[start:i+1]):
                 res.append(s[start:i+1])
                 backtrack(i+1)

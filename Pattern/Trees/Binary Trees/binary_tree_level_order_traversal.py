@@ -1,6 +1,5 @@
 from collections import deque
 
-
 def level_order_traversal(root):
     # Time complexity: O(n), where n is the number of nodes in the binary tree.
     # Space complexity: O(n), due to the storage required for the output list and the queue.
